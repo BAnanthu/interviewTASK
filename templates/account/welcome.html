@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/fp.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <style>
+        body{
+            display:grid;
+            place-items:center;
+            background:orange;
+        }
+        h1{
+           margin-top:50px;
+        }
+        a{
+
+           color :white;
+        }
+    </style>
+</head>
+<body>
+        <h1>WELCOME</h1>
+        {% if user.is_authenticated %}
+         <a href="/accountSignout/signout/">Sign Out</a>
+         <a href="/accountSignin/resetpwd/">Reset Password</a>
+        {% else %}
+         <a href="/accountSignin/">Sign In</a>
+        {% endif %}
+</body>
+</html>

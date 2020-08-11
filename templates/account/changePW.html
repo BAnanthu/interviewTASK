@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet"  href="{% static 'css/signin.css' %}">
+</head>
+
+<body>
+
+    <div class="row justify-content-center">
+        <div class="form-container">
+            <header class="signin-header">Change Password</header>
+            <form action="/accountSignin/newPassword/" class="form" method="post">
+                 {% csrf_token %}
+                <div class="row">
+                    <label>New Password :</label>
+                        <input id="login_password" type="password" name="new_password" class="form-control">
+                </div>
+                <div class="row">
+                    <label>Conform Password :</label>
+                    <input id="login_confrm_password" type="password" name="confrm_password" class="form-control">
+                </div>
+
+                <input style="margin-top:20px;" type="submit" class="btn btn-primary" value="login">
+
+<!--                <p>New here?<a href="/accountSignup/"> Sign Up</a></p>-->
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
