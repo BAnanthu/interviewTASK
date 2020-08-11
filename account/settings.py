@@ -26,7 +26,7 @@ SECRET_KEY = 'k)(+28$bjp8x#@6*-vbx0klzvqj&@&871+qp!s8x#*#ezc9jp%'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['ananthu123.pythonanywhere.com']
+# ALLOWED_HOSTS = ['ananthu123.pythonanywhere.com']
 
 # Application definition
 
@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'account.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

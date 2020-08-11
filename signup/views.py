@@ -1,12 +1,11 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.http import HttpResponse
-# from .forms import UserSignupForm
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 # Create your views here.
+
 def register(request):
     if request.method == "POST":
-
             name = request.POST['user_name']
             email = request.POST['user_email']
             password = request.POST['user_password']
