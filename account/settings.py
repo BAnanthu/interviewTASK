@@ -25,8 +25,8 @@ SECRET_KEY = 'k)(+28$bjp8x#@6*-vbx0klzvqj&@&871+qp!s8x#*#ezc9jp%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
+ALLOWED_HOSTS = ['ananthu123.pythonanywhere.com']
 
 # Application definition
 
@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'account.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -123,13 +123,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_URL = '/static/'
-
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_HOST_USER ='ananthu3454@gmail.com'
-EMAIL_HOST_PASSWORD = 'xxxxxxxxx'
+EMAIL_HOST_PASSWORD = '73566230881'
 EMAIL_USE_TLS = True
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
